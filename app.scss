@@ -1,0 +1,13 @@
+@import './static/style/theme.scss';
+
+page {
+    height: 100%;
+
+    &>view {
+        padding: 20rpx 30rpx;
+        box-sizing: border-box;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: #{$theme-bg-color};
+    }
+}

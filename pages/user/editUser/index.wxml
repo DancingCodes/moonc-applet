@@ -1,0 +1,13 @@
+<view class="editUser">
+    <view class="userInfo">
+        <view class="userImage">
+            <van-uploader file-list="{{ userPicture }}" max-count="1" bind:after-read="imageRead" bind:delete="imageDel" />
+        </view>
+        <view class="userName">
+            <van-field model:value="{{ userName }}" placeholder="请输入用户名" label="用户名：" border="{{false}}" maxlength="8" />
+        </view>
+    </view>
+    <view class="submitBtn" bindtap="submit">
+        <van-button loading="{{submitLoading}}">确认修改</van-button>
+    </view>
+</view>

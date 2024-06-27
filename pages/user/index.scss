@@ -1,0 +1,60 @@
+@import './static/style/theme.scss';
+
+.user {
+    .userInfo {
+        display: flex;
+        align-items: center;
+
+        .picture {
+            height: 120rpx;
+            width: 120rpx;
+            border-radius: 50%;
+        }
+
+        .userName {
+            flex: 1;
+            padding-left: 26rpx;
+            color: #{$theme-primary-color};
+            font-weight: bold;
+            font-size: 46rpx;
+        }
+
+        .editIcon {
+            width: 62rpx;
+            height: 62rpx;
+        }
+    }
+
+    .notice {
+        .van-notice-bar {
+            padding: unset !important;
+            background-color: unset !important;
+            color: #{$theme-primary-color};
+        }
+    }
+
+    .abilityList {
+        .listItem {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #{$theme-text-color};
+
+            .icon {
+                width: 62rpx;
+                height: 62rpx;
+                margin-right: 16rpx;
+            }
+
+            .text {
+                font-size: 36rpx;
+                color: #{$theme-text-color};
+                flex: 1;
+            }
+
+            .rightIcon {
+                width: 52rpx;
+                height: 52rpx;
+            }
+        }
+    }
+}

@@ -1,0 +1,85 @@
+@import './static/style/theme.scss';
+
+.editUser {
+    display: flex;
+    flex-direction: column;
+
+    .userInfo {
+        flex: 1;
+
+        .userImage {
+            display: flex;
+            justify-content: center;
+
+            .van-uploader {
+                border-radius: 20rpx;
+                overflow: hidden;
+
+                .van-uploader__upload {
+                    width: 240rpx !important;
+                    height: 240rpx !important;
+                    margin: unset !important;
+                }
+
+                .van-uploader__preview {
+                    margin: unset !important;
+                }
+
+                .van-uploader__preview-image {
+                    width: 240rpx !important;
+                    height: 240rpx !important;
+                }
+
+                .van-uploader__preview-delete:after {
+                    height: 40rpx !important;
+                    width: 40rpx !important;
+                }
+
+                .van-uploader__preview-delete-icon {
+                    font-size: 36rpx !important;
+                    color: #{$theme-text-color} !important;
+                }
+            }
+        }
+
+        .userName {
+            .van-cell {
+                margin-top: 80rpx;
+                background-color: unset !important;
+                border-bottom: 1rpx solid #{$theme-text-color};
+                padding: 12rpx 0;
+
+
+                .van-cell__title {
+                    max-width: unset !important;
+                    min-width: unset !important;
+                    flex: unset !important;
+                    margin-right: unset !important;
+                }
+
+                .van-field__label {
+                    color: #{$theme-text-color} !important;
+                }
+
+                .van-field__control {
+                    color: #{$theme-text-color} !important;
+                    text-align: center !important;
+                    padding-right: 140rpx;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+
+    }
+
+    .submitBtn {
+        .van-button--default {
+            background-color: unset !important;
+            border: 1px solid #{$theme-text-color} !important;
+            color: #{$theme-text-color} !important;
+            width: 100%;
+            border-radius: 10rpx !important;
+        }
+    }
+}

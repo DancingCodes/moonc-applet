@@ -1,0 +1,17 @@
+<view class="user">
+    <view class="userInfo">
+        <image class="picture" src="{{userInfo.picture}}" />
+        <view class="userName">{{userInfo.name}}</view>
+        <image class="editIcon" src="/static/image/user/设置.svg" bindtap="editUserInfo" />
+    </view>
+    <view class="notice">
+        <van-notice-bar left-icon="volume-o" text="这是一条通知" scrollable />
+    </view>
+    <view class="abilityList">
+        <view class="listItem" bindtap="goDriftBottle">
+            <image class="icon" src="/static/image/user/漂流瓶.svg" />
+            <view class="text">漂流瓶</view>
+            <image class="rightIcon" src="/static/image/user/右.svg" />
+        </view>
+    </view>
+</view>

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/index",
+    "pages/user/editUser/index",
+    "pages/driftBottle/index"
+  ],
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#caa32e",
+    "backgroundColor": "#171717",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/image/tabbar/indexWhite.png",
+        "selectedIconPath": "static/image/tabbar/indexSelected.png"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "text": "我的",
+        "iconPath": "static/image/tabbar/userWhite.png",
+        "selectedIconPath": "static/image/tabbar/userSelected.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarBackgroundColor": "#171717",
+    "navigationBarTextStyle": "white",
+    "homeButton": true
+  },
+  "usingComponents": {
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-popup": "@vant/weapp/popup/index"
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "resolveAlias": {
+    "@/*": "/*"
+  }
+}
