@@ -1,6 +1,7 @@
 Page({
     data: {
-        show: false
+        show: false,
+        message: ''
     },
     addItem: function () {
         this.setData({

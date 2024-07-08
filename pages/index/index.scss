@@ -3,6 +3,7 @@
 .index {
     position: relative;
     overflow: hidden;
+
     .scrollView {
         height: 100%;
 
@@ -47,5 +48,39 @@
     }
 
     .vanDialog {
+        background-color: rgb(35, 35, 35);
+        padding: 26rpx;
+
+        .dialogTitle {
+            text-align: center;
+            font-size: 40rpx;
+            color: #{$theme-primary-color};
+            font-weight: bold;
+        }
+
+        .dialogBody {
+            padding: 20rpx 0;
+
+            .vanField {
+                .van-cell {
+                    background-color: unset;
+                    padding: unset;
+
+                    .van-field__control--textarea {
+                        color: #{$theme-text-color};
+                        font-size: 40rpx !important;
+                    }
+                }
+            }
+        }
+
+        .dialogBtn {
+            text-align: center;
+            font-size: 40rpx;
+            color: #{$theme-text-color};
+            font-weight: bold;
+            text-align: center;
+        }
+
     }
 }
