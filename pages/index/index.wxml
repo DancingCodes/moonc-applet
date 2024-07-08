@@ -12,13 +12,13 @@
     <view class="addBtn" bindtap="addItem">
         <image class="icon" src="/static/image/index/加号.svg" />
     </view>
-    <van-dialog show="{{ show }}" use-slot custom-class="vanDialog" showConfirmButton="{{false}}">
+    <van-dialog show="{{ show }}" use-slot custom-class="vanDialog" showConfirmButton="{{false}}" close-on-click-overlay>
         <view class="dialogTitle">添加事项</view>
         <view class="dialogBody">
             <van-cell-group>
                 <van-field class="vanField" model:value="{{ message }}" type="textarea" placeholder="请输入事项" autosize="{{ {maxHeight: 200, minHeight: 50} }}" border="{{ false }}" />
             </van-cell-group>
         </view>
-        <view class="dialogBtn">确认</view>
+        <view class="dialogBtn" bindtap="submit">确认</view>
     </van-dialog>
 </view>

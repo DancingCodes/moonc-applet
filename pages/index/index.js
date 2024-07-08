@@ -8,9 +8,7 @@ Page({
             show: true
         })
     },
-    hideOverlay: function () {
-        this.setData({
-            show: false
-        })
+    submit: function () {
+        console.log(2);
     }
 })
