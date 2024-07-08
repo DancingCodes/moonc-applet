@@ -33,7 +33,8 @@
     "van-uploader": "@vant/weapp/uploader/index",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
-    "van-notice-bar": "@vant/weapp/notice-bar/index"
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-dialog": "@vant/weapp/dialog/index"
   },
   "lazyCodeLoading": "requiredComponents",
   "resolveAlias": {

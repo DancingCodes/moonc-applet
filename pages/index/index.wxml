@@ -2,14 +2,17 @@
     <scroll-view class="scrollView" scroll-y>
         <view class="row">
             <view class="rowHead">
-                <view class="rowTitle">未完成</view>
+                <view class="rowTitle">进行中</view>
                 <view class="rowTime">2022-12-27 12:00:00</view>
             </view>
             <view class="rowBody">今天我应该先去西湖喝口水，然后再去塔克拉玛干消化消化食。</view>
             <view class="rowFoot"></view>
         </view>
     </scroll-view>
-    <view class="addBtn">
+    <view class="addBtn" bindtap="addItem">
         <image class="icon" src="/static/image/index/加号.svg" />
     </view>
+    <van-dialog show="{{ show }}" use-slot custom-class="vanDialog" showConfirmButton="{{false}}">
+        123
+    </van-dialog>
 </view>
