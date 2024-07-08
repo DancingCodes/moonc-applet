@@ -2,8 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/user/index",
-    "pages/user/editUser/index",
-    "pages/driftBottle/index"
+    "pages/user/editUser/index"
   ],
   "tabBar": {
     "color": "#FFFFFF",
@@ -34,8 +33,7 @@
     "van-uploader": "@vant/weapp/uploader/index",
     "van-field": "@vant/weapp/field/index",
     "van-button": "@vant/weapp/button/index",
-    "van-notice-bar": "@vant/weapp/notice-bar/index",
-    "van-popup": "@vant/weapp/popup/index"
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
   },
   "lazyCodeLoading": "requiredComponents",
   "resolveAlias": {

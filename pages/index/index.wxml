@@ -1,3 +1,15 @@
 <view class="index">
-    测试版本
+    <scroll-view class="scrollView" scroll-y>
+        <view class="row">
+            <view class="rowHead">
+                <view class="rowTitle">未完成</view>
+                <view class="rowTime">2022-12-27 12:00:00</view>
+            </view>
+            <view class="rowBody">今天我应该先去西湖喝口水，然后再去塔克拉玛干消化消化食。</view>
+            <view class="rowFoot"></view>
+        </view>
+    </scroll-view>
+    <view class="addBtn">
+        <image class="icon" src="/static/image/index/加号.svg" />
+    </view>
 </view>

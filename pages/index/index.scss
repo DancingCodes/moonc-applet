@@ -1,0 +1,48 @@
+@import './static/style/theme.scss';
+
+.index {
+    position: relative;
+    overflow: hidden;
+    .scrollView {
+        height: 100%;
+
+        .row {
+            border-bottom: 1rpx solid #{$theme-text-color};
+            padding: 16rpx 0;
+
+            .rowHead {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                font-size: 40rpx;
+                font-weight: bold;
+            }
+
+            .rowBody {
+                padding-top: 10rpx;
+                font-weight: bold;
+                font-size: 40rpx;
+                color: #{$theme-primary-color};
+            }
+        }
+    }
+
+    .addBtn {
+        position: absolute;
+        bottom: 30rpx;
+        right: 30rpx;
+        width: 100rpx;
+        height: 100rpx;
+        border: 1rpx solid #{$theme-primary-color};
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgba(255, 255, 255, 0.2) 0px 2px 8px 0px;
+
+        image {
+            width: 50rpx;
+        }
+    }
+}
