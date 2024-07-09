@@ -26,6 +26,12 @@
                 color: #{$theme-primary-color};
             }
         }
+
+        .loading {
+            padding-top: 20rpx;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     .empty {

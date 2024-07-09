@@ -1,5 +1,5 @@
 <view class="index">
-    <scroll-view wx:if="{{total}}" class="scrollView" scroll-y refresher-enabled refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh">
+    <scroll-view wx:if="{{total}}" class="scrollView" scroll-y refresher-enabled refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh" bindscrolltolower="scrolltolower">
         <view class="row" wx:for="{{list}}" wx:key="id">
             <view class="rowHead">
                 <view class="rowTitle">{{item.status === '0' ? '进行中' : '已完成'}}</view>
@@ -7,6 +7,10 @@
             </view>
             <view class="rowBody">{{item.content}}</view>
             <view class="rowFoot"></view>
+        </view>
+        <view class="loading">
+            <van-loading wx:if="{{list.length !== total}}" size="48rpx" />
+            <view wx:else class="text">没有更多啦</view>
         </view>
     </scroll-view>
     <view class="empty" wx:else>
