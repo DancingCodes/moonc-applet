@@ -13,7 +13,14 @@ Page({
     onLoad() {
         this.getList()
     },
-    async getList() {
+    async getList(isReset = false) {
+        if (isReset) {
+            this.setData({
+                pageNo: 1,
+                list: [],
+                total: 0
+            })
+        }
         const { data } = await getMemoList({ pageNo: this.data.pageNo, pageSize: 10 })
         this.setData({
             list: [...this.data.list, ...data.list],
@@ -34,11 +41,11 @@ Page({
             this.setData({
                 show: false
             })
+            this.getList(true)
         })
-
     },
     async refresherrefresh() {
-        await this.getList()
+        await this.getList(true)
         this.setData({
             refresherTriggered: false
         })

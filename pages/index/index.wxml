@@ -1,5 +1,5 @@
 <view class="index">
-    <scroll-view class="scrollView" scroll-y refresher-enabled refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh">
+    <scroll-view wx:if="{{total}}" class="scrollView" scroll-y refresher-enabled refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh">
         <view class="row" wx:for="{{list}}" wx:key="id">
             <view class="rowHead">
                 <view class="rowTitle">{{item.status === '0' ? '进行中' : '已完成'}}</view>
@@ -9,6 +9,9 @@
             <view class="rowFoot"></view>
         </view>
     </scroll-view>
+    <view class="empty" wx:else>
+        <van-empty description="空空如也" />
+    </view>
     <view class="addBtn" bindtap="addItem">
         <image class="icon" src="/static/image/index/加号.svg" />
     </view>
