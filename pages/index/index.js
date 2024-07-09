@@ -25,6 +25,7 @@ Page({
         this.setData({
             list: [...this.data.list, ...data.list],
             total: data.total,
+            pageNo: this.data.pageNo + 1
         })
     },
     async refresherrefresh() {
@@ -37,9 +38,6 @@ Page({
         if (this.data.list.length === this.data.total) {
             return
         }
-        this.setData({
-            pageNo: this.data.pageNo + 1
-        })
         this.getList()
     },
     addItem() {
