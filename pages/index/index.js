@@ -16,8 +16,7 @@ Page({
     resetList() {
         this.setData({
             pageNo: 1,
-            list: [],
-            total: 0
+            list: []
         })
     },
     async getList() {
@@ -33,6 +32,7 @@ Page({
         this.setData({
             refresherTriggered: false
         })
+        toast('内容已刷新')
     },
     scrolltolower() {
         if (this.data.list.length === this.data.total) {
