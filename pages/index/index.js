@@ -13,23 +13,23 @@ Page({
     onLoad() {
         this.getList()
     },
-    async getList(isReset = false) {
-        if (isReset) {
-            this.setData({
-                pageNo: 1,
-                list: [],
-                total: 0
-            })
-        }
+    resetList() {
+        this.setData({
+            pageNo: 1,
+            list: [],
+            total: 0
+        })
+    },
+    async getList() {
         const { data } = await getMemoList({ pageNo: this.data.pageNo, pageSize: 10 })
         this.setData({
             list: [...this.data.list, ...data.list],
             total: data.total,
-            pageNo: this.data.pageNo + 1
         })
     },
     async refresherrefresh() {
-        await this.getList(true)
+        this.resetList()
+        await this.getList()
         this.setData({
             refresherTriggered: false
         })
@@ -38,6 +38,9 @@ Page({
         if (this.data.list.length === this.data.total) {
             return
         }
+        this.setData({
+            pageNo: this.data.pageNo + 1
+        })
         this.getList()
     },
     addItem() {
@@ -54,7 +57,8 @@ Page({
             this.setData({
                 show: false
             })
-            this.getList(true)
+            this.resetList()
+            this.getList()
         })
     }
 })
