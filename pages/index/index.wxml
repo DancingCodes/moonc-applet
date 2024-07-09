@@ -1,11 +1,11 @@
 <view class="index">
-    <scroll-view class="scrollView" scroll-y>
-        <view class="row">
+    <scroll-view class="scrollView" scroll-y refresher-enabled refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh">
+        <view class="row" wx:for="{{list}}" wx:key="id">
             <view class="rowHead">
-                <view class="rowTitle">进行中</view>
-                <view class="rowTime">2022-12-27 12:00:00</view>
+                <view class="rowTitle">{{item.status === '0' ? '进行中' : '已完成'}}</view>
+                <view class="rowTime">{{item.createTime}}</view>
             </view>
-            <view class="rowBody">今天我应该先去西湖喝口水，然后再去塔克拉玛干消化消化食。</view>
+            <view class="rowBody">{{item.content}}</view>
             <view class="rowFoot"></view>
         </view>
     </scroll-view>

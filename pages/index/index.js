@@ -4,14 +4,20 @@ import { toast } from '@/utils/toast/index'
 Page({
     data: {
         show: false,
-        content: ''
+        content: '',
+        refresherTriggered: false,
+        pageNo: 1,
+        list: [],
+        total: 0
     },
     onLoad() {
-        getMemoList({
-            pageNo: 1,
-            pageSize: 10
-        }).then(res => {
-            console.log(res);
+        this.getList()
+    },
+    async getList() {
+        const { data } = await getMemoList({ pageNo: this.data.pageNo, pageSize: 10 })
+        this.setData({
+            list: [...this.data.list, ...data.list],
+            total: data.total
         })
     },
     addItem() {
@@ -30,5 +36,11 @@ Page({
             })
         })
 
+    },
+    async refresherrefresh() {
+        await this.getList()
+        this.setData({
+            refresherTriggered: false
+        })
     }
 })
