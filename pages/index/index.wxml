@@ -9,7 +9,7 @@
             <view class="rowFoot"></view>
         </view>
         <view class="loading">
-            <van-loading wx:if="{{list.length !== total}}" size="48rpx" />
+            <van-loading wx:if="{{list.length !== total}}" size="48rpx" color="#ececec" />
             <view wx:else class="text">没有更多啦</view>
         </view>
     </scroll-view>
