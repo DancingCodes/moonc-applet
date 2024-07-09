@@ -22,10 +22,10 @@ Page({
             }
         })
     },
-    editUserInfo: function () {
+    editUserInfo() {
         wx.navigateTo({ url: '/pages/user/editUser/index' })
     },
-    goDriftBottle: function () {
+    goDriftBottle() {
         wx.navigateTo({ url: '/pages/driftBottle/index' })
     }
 })
