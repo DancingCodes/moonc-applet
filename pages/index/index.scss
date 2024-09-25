@@ -8,21 +8,26 @@
         height: 100%;
 
         .row {
-            border-bottom: 1rpx solid #{$theme-text-color};
+            border-bottom: 1rpx dashed #{$theme-text-color};
             padding: 16rpx 0;
 
             .rowHead {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-size: 40rpx;
-                font-weight: bold;
+
+                .rowTitle {
+                    font-size: 36rpx;
+                }
+
+                .rowTime {
+                    font-size: 32rpx;
+                }
             }
 
             .rowBody {
-                padding-top: 10rpx;
-                font-weight: bold;
-                font-size: 40rpx;
+                padding-top: 20rpx;
+                font-size: 36rpx;
                 color: #{$theme-primary-color};
             }
         }
@@ -63,42 +68,5 @@
         image {
             width: 50rpx;
         }
-    }
-
-    .vanDialog {
-        background-color: rgb(35, 35, 35);
-        padding: 26rpx;
-
-        .dialogTitle {
-            text-align: center;
-            font-size: 40rpx;
-            color: #{$theme-primary-color};
-            font-weight: bold;
-        }
-
-        .dialogBody {
-            padding: 20rpx 0;
-
-            .vanField {
-                .van-cell {
-                    background-color: unset;
-                    padding: unset;
-
-                    .van-field__control--textarea {
-                        color: #{$theme-text-color};
-                        font-size: 40rpx !important;
-                    }
-                }
-            }
-        }
-
-        .dialogBtn {
-            text-align: center;
-            font-size: 40rpx;
-            color: #{$theme-text-color};
-            font-weight: bold;
-            text-align: center;
-        }
-
     }
 }

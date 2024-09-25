@@ -3,8 +3,6 @@ import { toast } from '@/utils/toast/index'
 
 Page({
     data: {
-        show: false,
-        content: '',
         refresherTriggered: false,
         pageNo: 1,
         list: [],
