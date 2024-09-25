@@ -1,4 +1,11 @@
 <view class="projectMgmt">
    <van-field value="{{ content }}" placeholder="请输入内容" border="{{ false }}" />
-   <timePicker bindOnConfirm="onConfirm" bindOnCancel="onCancel"></timePicker>
+
+   <view bindtap="showTimePicker">
+      <van-field disabled value="{{ currentDate }}" placeholder="请选择提醒时间" border="{{ false }}" />
+   </view>
+
+   <van-action-sheet show="{{ timePickerShow }}" title="请选择提醒时间" bind:close="closeTimePicker">
+      <timePicker bindOnConfirm="onTimePickerConfirm" bindOnCancel="onTimePickerCancel"></timePicker>
+   </van-action-sheet>
 </view>
