@@ -42,21 +42,8 @@ Page({
         this.getList()
     },
     addItem() {
-        this.setData({
-            show: true
-        })
-    },
-    submit() {
-        if (this.data.content.trim().length === 0) {
-            return toast('内容不可为空')
-        }
-        createMemoItem({ content: this.data.content }).then(() => {
-            toast('添加成功')
-            this.setData({
-                show: false
-            })
-            this.resetList()
-            this.getList()
+        wx.navigateTo({
+          url: '/pages/projectMgmt/index',
         })
     }
 })
