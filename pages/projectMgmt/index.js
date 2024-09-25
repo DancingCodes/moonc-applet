@@ -5,10 +5,12 @@ Page({
     data: {
         // 内容
         content: '',
-        // 订阅时间
-        currentDate: '',
+        // 提醒时间
+        reminderTime: '',
         // 时间选择器展示状态
-        timePickerShow: false
+        timePickerShow: false,
+        // 确定按钮loading
+        btnLoading: false
     },
     onLoad() {
     },
@@ -27,24 +29,37 @@ Page({
     // 确认时间选择器
     onTimePickerConfirm(e) {
         this.setData({
-            currentDate: e.detail
+            reminderTime: e.detail
         })
         this.closeTimePicker()
     },
     // 取消时间选择器
     onTimePickerCancel() {
         this.setData({
-            currentDate: ''
+            reminderTime: ''
         })
         this.closeTimePicker()
     },
-    // 发布
+    // 确认
     submit() {
-        if (this.data.content.trim().length === 0) {
+        if (!this.data.content) {
             return toast('内容不可为空')
         }
-        createMemoItem({ content: this.data.content }).then(() => {
+        if (!this.data.reminderTime) {
+            return toast('提醒时间不可为空')
+        }
+        this.setData({
+            btnLoading: true
+        })
+        createMemoItem({ content: this.data.content, reminderTime: this.data.reminderTime }).then(() => {
             toast('添加成功')
+            wx.switchTab({
+                url: '/pages/index/index',
+            })
+        }).finally(() => {
+            this.setData({
+                btnLoading: false
+            })
         })
     },
 })

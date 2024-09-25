@@ -1,5 +1,17 @@
 @import './static/style/theme.scss';
 
 .projectMgmt {
+    display: flex;
+    flex-direction: column;
 
+    .formBox {
+        flex: 1;
+    }
+
+
+    .sumbitBtn {
+        .van-button {
+            width: 100%;
+        }
+    }
 }
