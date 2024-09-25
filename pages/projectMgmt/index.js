@@ -15,8 +15,12 @@ Page({
         btnLoading: false
     },
     onLoad(options) {
-        this.data.id = options.id
-        this.setFormData()
+        if (options.id) {
+            this.setData({
+                id: options.id
+            })
+            this.setFormData()
+        }
     },
     // 设置表单内容
     setFormData() {

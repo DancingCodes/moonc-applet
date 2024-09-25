@@ -8,5 +8,10 @@
          <timePicker bindOnConfirm="onTimePickerConfirm" bindOnCancel="onTimePickerCancel"></timePicker>
       </van-action-sheet>
    </div>
-   <van-button class="sumbitBtn" loading="{{btnLoading}}" bind:tap="submit">确认</van-button>
+   <view class="btnBox">
+      <van-button wx:if="{{id}}" class="sumbitBtn" type="danger" loading="{{btnLoading}}" bind:tap="submit">
+         删除
+      </van-button>
+      <van-button class="sumbitBtn" type="info" loading="{{btnLoading}}" bind:tap="submit">确认</van-button>
+   </view>
 </view>

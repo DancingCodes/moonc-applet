@@ -9,9 +9,18 @@
     }
 
 
-    .sumbitBtn {
-        .van-button {
-            width: 100%;
+    .btnBox {
+        display: flex;
+        column-gap: 30rpx;
+
+        .sumbitBtn {
+            flex: 1;
+
+            .van-button {
+                width: 100%;
+            }
         }
     }
+
+
 }
