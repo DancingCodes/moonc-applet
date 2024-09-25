@@ -14,5 +14,12 @@ Page({
         createMemoItem({ content: this.data.content }).then(() => {
             toast('添加成功')
         })
-    }
+    },
+    onConfirm(e) {
+        console.log(e.detail);
+    },
+    onCancel() {
+        console.log('关闭');
+
+    },
 })

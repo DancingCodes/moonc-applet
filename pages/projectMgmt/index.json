@@ -1,3 +1,6 @@
 {
-    "navigationBarTitleText": "项目管理"
+    "navigationBarTitleText": "项目管理",
+    "usingComponents": {
+        "timePicker": "/components/timePicker/index"
+    }
 }

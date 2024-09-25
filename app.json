@@ -37,7 +37,8 @@
     "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-dialog": "@vant/weapp/dialog/index",
     "van-empty": "@vant/weapp/empty/index",
-    "van-loading": "@vant/weapp/loading/index"
+    "van-loading": "@vant/weapp/loading/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index"
   },
   "lazyCodeLoading": "requiredComponents",
   "resolveAlias": {

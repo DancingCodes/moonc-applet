@@ -8,6 +8,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/projectMgmt/index",
+          "pathName": "pages/projectMgmt/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "pages/driftBottle/index",
           "pathName": "pages/driftBottle/index",
           "query": "",
