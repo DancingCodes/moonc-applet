@@ -2,7 +2,7 @@
     <scroll-view wx:if="{{total}}" class="scrollView" scroll-y refresher-enabled
         refresher-triggered="{{refresherTriggered}}" bindrefresherrefresh="refresherrefresh"
         bindscrolltolower="scrolltolower" enhanced="{{true}}" show-scrollbar="{{false}}">
-        <view class="row" wx:for="{{list}}" wx:key="id">
+        <view class="row" wx:for="{{list}}" wx:key="id" bindtap="editItem" data-id="{{item.id}}">
             <view class="rowHead">
                 <view class="rowTitle">{{item.status === '0' ? '进行中' : '已完成'}}</view>
                 <view class="rowTime">{{item.createTime}}</view>

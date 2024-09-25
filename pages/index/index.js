@@ -1,4 +1,4 @@
-import { createMemoItem, getMemoList } from '@/api/memo/index'
+import { getMemoList } from '@/api/memo/index'
 import { toast } from '@/utils/toast/index'
 
 Page({
@@ -42,8 +42,14 @@ Page({
         this.getList()
     },
     addItem() {
-        wx.navigateTo({
-          url: '/pages/projectMgmt/index',
+        wx.redirectTo({
+            url: '/pages/projectMgmt/index',
+        })
+    },
+    editItem(e) {
+        const id = e.currentTarget.dataset.id
+        wx.redirectTo({
+            url: `/pages/projectMgmt/index?id=${id}`,
         })
     }
 })

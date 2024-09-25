@@ -1,8 +1,10 @@
-import { createMemoItem } from '@/api/memo/index'
+import { createMemo, getMemo } from '@/api/memo/index'
 import { toast } from '@/utils/toast/index'
 
 Page({
     data: {
+        // 编辑时的id
+        id: '',
         // 内容
         content: '',
         // 提醒时间
@@ -12,7 +14,19 @@ Page({
         // 确定按钮loading
         btnLoading: false
     },
-    onLoad() {
+    onLoad(options) {
+        this.data.id = options.id
+        this.setFormData()
+    },
+    // 设置表单内容
+    setFormData() {
+        getMemo({ id: this.data.id }).then(res => {
+            const { content, reminderTime } = res.data
+            this.setData({
+                content,
+                reminderTime
+            })
+        })
     },
     // 打开时间选择器
     showTimePicker() {
@@ -51,7 +65,7 @@ Page({
         this.setData({
             btnLoading: true
         })
-        createMemoItem({ content: this.data.content, reminderTime: this.data.reminderTime }).then(() => {
+        createMemo({ content: this.data.content, reminderTime: this.data.reminderTime }).then(() => {
             toast('添加成功')
             wx.switchTab({
                 url: '/pages/index/index',
